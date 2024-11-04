@@ -20,8 +20,10 @@ When('User click on check the mail button', async function(){
 });
 
 Then('mail should be created',async function () {
-    const mailName =await page.locator("//button[contains(@class, 'ng-scope')]//span[1]");
+    const mailName =await page.locator("//div[contains(@class, 'ng-scope')]//span[1]");
     await expect(mailName).toBeVisible()
     await browser.close();
+
+     
 
 })
